@@ -83,5 +83,4 @@ var allQuestions = [
 
 [Bootstrap](http://getbootstrap.com/2.3.2/components.html)
 
-http://macdown.uranusjr.com/download/v0.1/
-https://github.com/uranusjr/macdown/releases/download/v0.1/MacDown.app.zip
+[媲美Mou的MD编辑器:MacDown](http://macdown.uranusjr.com/download/v0.1/) / [alternative url](https://github.com/uranusjr/macdown/releases/download/v0.1/MacDown.app.zip)
