@@ -1,18 +1,24 @@
 # JavaScript学习路线
 
-完成整个课程大纲需要花上6～8天的时间，将学会完整的JS语言（包括JQuery核一些HTML5）
+标签（空格分隔）： JavaScript Tutorial Starter
 
-###### 参考书 Professional JavaScript for Web Developers(***ProJS*** for short!!)
-###### JavaScript终极编辑器：WebStorm 这是最值得投资的利器
+---
+
+*完成整个课程大纲需要花上6～8天的时间，将学会完整的JS语言（包括JQuery和一些HTML5）*
+
+>参考书 Professional JavaScript for Web Developers(***ProJS*** for short!!)
+>
+JavaScript终极编辑器：WebStorm 这是最值得投资的利器
   
 ### 学习进程安排：
-* 1～2天 简介 数据类型， 表达式， 操作符
+
+* 第1～2天 简介 数据类型， 表达式， 操作符
 	* 参考书：***前言＋第1～2章*** 
 		* 使用FireFox搭配 Firebug调试代码
 		* 完成Codecademy上[JavaScript Track](http://www.codecademy.com/tracks/javascript)的Introduction to JavaScript部分
 	* 参考书：***第3～4章*** 跳过位操作部分
 		* 完成Codecademy上[JavaScript Track](http://www.codecademy.com/tracks/javascript)的Introduction to JavaScript的*2～5*部分
-* 3～4天 对象， 数组， 函数， DOM， jQuery
+* 第3～4天 对象， 数组， 函数， DOM， jQuery
 	* 阅读***ProJS***第6章， 只看*Understanding Objects*部分
 	* 阅读博文 [JavaScript对象详解](http://javascriptissexy.com/javascript-objects-in-detail/)
 	* 到Codecademy上完成相应的6～8部分
@@ -24,9 +30,7 @@
 	* 问答应用可以产生任意多的问题，每个问题有任意多的选项。
 	* 在最后的页面显示用户的成绩。 这个页面进现实成绩， 所以要吧最后一个问题去掉。
 	* 用数组存储所有的问题，每个问题包括它的选项和正确答案，都封装成一个对象，问题数组看起来应该是这样：
-		
->>>
-```javascript
+```
 var allQuestions = [
 	{
 		question: "Who is Prime Minister of the United Kingdom?",
@@ -43,7 +47,7 @@ var allQuestions = [
 
 *	* 当用户点击“Next”时， 使用```document.getElementById```或jQuery动态添加一个问题，并且移去当前问题。在这个版本里“Next”是唯一的导航按钮。
 	* 
-* 5～6天 正则表达式， Windows对象， 事件， jQuery
+* 第5～6天 正则表达式， Windows对象， 事件， jQuery
 	* 阅读***ProJS***第20，23章
 	* 完全理解样例代码
 	* 学习＋提升
@@ -55,7 +59,7 @@ var allQuestions = [
 		* 添加用户认证，允许用户登录， 把用户认证信息保存在**本地存储**（html5,local storage）
 		* 使用cookies记住用户， 当用户再次登录时显示“欢迎**用户名**回来”
 		
-* 7天 类， 继承， HTML5
+* 第7～天 类， 继承， HTML5
 	1. 阅读博文 [JavaScript面向对象必知必会](http://javascriptissexy.com/oop-in-javascript-what-you-need-to-know/)
 	2. 阅读***ProJS*** 第6， 16， 22， 24. 第6只读“Object Creation”和“Inheritance”部分。**注意：**这是JS中技术性强度最大的部分， 但至少应学会“Prototype Pattern”，“Factory Pattern”和“Prototypal Inheritance”.
 	3. 继续升级之前的问答应用：
@@ -69,12 +73,13 @@ var allQuestions = [
 	5. 构思一个项目，趁热打铁迅速开发。卡住的时候参考 ***JavaScript权威指南*** 或者 ***ProJS***。成为StackOverFlow的活跃用户， 多多提问，尽量回答。
 	
 
-* 继续提升
-	1. [精通backbone.js](http://javascriptissexy.com/learn-backbone-js-completely/)
-	2. [中高级JavaScript进阶](http://javascriptissexy.com/learn-intermediate-and-advanced-javascript/)
-	3. [不侧漏精通**Node.js**](http://www.crimx.com//2014/05/22/learn-node-js-completely-and-with-confidence/)
-	4. [Meteor.js入门](#)
-	5. [Best 3 Framework for JS](#)
+### 继续提升
+1. [精通backbone.js](http://javascriptissexy.com/learn-backbone-js-completely/)
+	*  [backbone.js官网](http://documentcloud.github.io/backbone/)
+2. [中高级JavaScript进阶](http://javascriptissexy.com/learn-intermediate-and-advanced-javascript/)
+3. [不侧漏精通**Node.js**](http://www.crimx.com//2014/05/22/learn-node-js-completely-and-with-confidence/)
+4. [Meteor.js入门](#)
+5. [Best 3 Framework for JS](#)
 
 [Bootstrap](http://getbootstrap.com/2.3.2/components.html)
 

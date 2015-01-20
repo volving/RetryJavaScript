@@ -378,7 +378,7 @@ sayHi2("hi, ", "Boyang");
 ```
 output:
 
-```
+```c
 2
 hi, 
 Boyang
@@ -417,4 +417,88 @@ The last same-named function will overwrite the ones before it
 	
 
 ## Chapter 4 p86~ === 9:23 PM January 19, 2015
+
 	
+
+
+## Chapter 5 Reference Type, p103~  === 2:44 PM January 20, 2015
+
+### THE OBJECT TYPE
+
+Two ways to create an instance of Object.
+
+* new a instance of Object
+```javascript
+var person = new Object();
+```
+* object literal notation
+```javascript
+var person = {
+	name : 'Nicholas',
+	age : 29
+}
+```
+Two ways to get access to the properties
+
+* brackets notation: used especially when the property name contains a blank or other syntax error/keyword/reserved word.
+
+```javascript
+var f_name = person["first name"]
+```
+
+* dot notation
+
+```javascript
+var age = person.age;
+```
+
+### THE ARRAY TYPE
+
+**ANY** type of data can be hold in each slot.
+
+Two ways to create Arrays:
+
+* new notation, uhn... `new` can be ommited
+
+```javascript
+var color = new Array();
+var colour = new Array(20);
+var colors = new Array('red', 'blue', 'green');
+```
+
+* array literal notaion:
+
+```javascript
+var colors = ['red', 'blue', 'green'];
+var names = [];
+var values = [1,2,]; // 2 or 3 items
+var options = [,,,,,]; //5 or 6 items
+```
+
+* join items in array
+
+```javascript
+var colors = ['red', 'green', 'blue'];
+alert(colors.join(','));
+alert(colors.join('||'));
+```
+
+* Stack Methods
+	* `push`
+
+	* `pop`
+
+* Queue Methods
+	* `push`
+
+	* `shift` 
+
+	* `unshift`
+
+	* `pop`
+
+* Reordering Methods
+	* `reverse`
+	* `sort`
+
+parentheses
