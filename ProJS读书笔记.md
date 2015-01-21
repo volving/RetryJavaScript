@@ -565,5 +565,224 @@ console.log(names.valueOf());		//[ 'Adam', 'Bush', 'Chanel', 'Daniel' ]
 
 * Manipulation Methods
 	* `conct()`
+	* `slice()`
 
+	```javascript
+	var names = new Array('Adam', 'Bush', 'Chanel', 'Daniel');
+	var names2 = ['WEI','Xen', 'York', 'Zoro'];
+
+	var names3 = names.concat(names2);
+	console.log(names);		// [ 'Adam', 'Bush', 'Chanel', 'Daniel' ]
+	console.log(names3);	// [ 'Adam', 'Bush', 'Chanel', 'Daniel', 'WEI', 'Xen', 'York', 'Zoro' ]
+
+	var names4 = names3.slice(2);
+	console.log(names4);	// [ 'Chanel', 'Daniel', 'WEI', 'Xen', 'York', 'Zoro' ]
+
+	var names5 = names3.slice(2, 6);
+	console.log(names5);	// [ 'Chanel', 'Daniel', 'WEI', 'Xen' ]	
+	```
+	
+	* `splice()` the so-called **MOST POWERFUL METHOD**
+		* Deletion
+			just call `.splice(<start>[, end])` to delete the items
+		* Insertion
+			call `.splice(<start>, <number to delete>, <,,,>)` to insert <,,,> at position <start> after deleting <number to delete> items behind <start>
+		* Replacement special useage of the 'Insertion'
+
+		```javascript
+		console.log(names3);	// [ 'Adam', 'Bush', 'Chanel', 'Daniel', 'WEI', 'Xen', 'York', 'Zoro' ]
+		var names6 = names3.concat([]); // Create a new array using the existing one
+		console.log(names6);	// [ 'Adam', 'Bush', 'Chanel', 'Daniel', 'WEI', 'Xen', 'York', 'Zoro' ]
+
+		names3.splice(2, 9);	// Deletion
+		console.log(names3);	// [ 'Adam', 'Bush' ]
+		console.log(names6);	// [ 'Adam', 'Bush', 'Chanel', 'Daniel', 'WEI', 'Xen', 'York', 'Zoro' ]
+		names3.splice(1, 0, 'Chanel', 'Daniel');	// Instion
+		console.log(names3);	// [ 'Adam', 'Chanel', 'Daniel', 'Bush' ]
+
+		names6.splice(2, 2, 'Chower', 'Duskun');	// Replacement
+		console.log(names6);	// [ 'Adam', 'Bush', 'Chower', 'Duskun', 'WEI', 'Xen', 'York', 'Zoro' ]
+		
+		```
+
+* Location Methods
+	* `.indexOf()`
+	* `.lastIndexOf()`
+	
+	```javascript
+	var names = new Array('Adam', 'Bush', 'Chanel', 'Daniel', 'Bush', 'Effeil', 'Ford');
+	console.log(names.indexOf('Bush'));	// 1
+	console.log(names.indexOf('Bush', 1)); // 1
+	console.log(names.indexOf('Bush', 2)); // 4
+	console.log(names.indexOf('Bush', 5)); // -1
+
+	console.log(names.lastIndexOf('Bush')); // 4
+	console.log(names.lastIndexOf('Bush', 4)); // 4
+	console.log(names.lastIndexOf('Bush', 3)); // 1
+
+	```
+
+* Iterative Methods
+	* `.every(func)`	: Runs the given function **func** on every item in the array and return **true** if **func** returns **true** for every item.
+
+	```javascript
+	var names = new Array('Adam', 'Bush', 'Chanel', 'Daniel', 'Bush', 'Effeil', 'Ford');
+
+	var every = names.every(function(item, index, array){
+		console.log(item);
+		return true;
+	});
+	console.log('-----------------------------');
+	console.log(every);
+	
+	%%%%%%%%%%%console%%%%%%%%%%%
+	Adam
+	Bush
+	Chanel
+	Daniel
+	Bush
+	Effeil
+	Ford
+	-----------------------------
+	true
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	```
+	
+	* `.filter(func)` : Runs the given function **func** on every item in the array and returns an array of all items(in array) on which the function returns **true**;
+
+	```javascript
+	console.log('-----------------------------');
+	var filter = names.filter(function (item, index, array) {
+	//	console.log(array);
+	//	console.log(index);
+		return (item.length > 4);
+	})
+	console.log(filter);
+	%%%%%%%%%%%console%%%%%%%%%%%
+	true
+	-----------------------------
+	[ 'Chanel', 'Daniel', 'Effeil' ]
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	```
+	
+	* `.forEach(func)` : Runs the given function on every item in the array~ no returns
+
+	* `.map(func)` : Runs the given function, and return result of each function call in an array
+	* `.some(func)` : Runs the given function on  every item in the array and returns array of **true** (if the function returns true) and **false** (if the function returns false)
+
+	```javascript
+	var names = new Array('Adam', 'Bush', 'Chanel', 'Daniel', 'Bush', 'Effeil', 'Ford');
+
+	/*********every()*********/
+	var every = names.every(function(item, index, array){
+	//	console.log(item);
+		return true;
+	});
+	console.log('-----------------------------');
+	console.log(every);
+
+	/*********filter()*********/
+	console.log('-----------------------------');
+	var filter = names.filter(function (item, index, array) {
+	//	console.log(array);
+	//	console.log(index);
+		return (item.length > 4);
+	})
+	console.log(filter);
+
+	/*********forEach()*********/
+	console.log('-----------------------------');
+	var forEach = [];
+	names.forEach(function (item, index, array) {
+		item = '_'.concat(item);
+	//	forEach.push(item);
+		forEach.unshift(item);
+	//	console.log(item);
+	})
+	console.log(forEach);
+	console.log(names);
+
+	/*********map()*********/
+	console.log('-----------------------------');
+	var mp = names.map(function (item, index, array) {
+	//	console.log(item+":"+index)
+		item = item.concat(index);
+		console.log(item);
+		return item;
+	});
+	console.log(mp);
+
+	/*********some()*********/
+	console.log('-----------------------------');
+	var some = names. map(function (item, index, array) {
+		return (item == 'Bush');
+	});
+	console.log(some);
+
+	%%%%%%%%%%%Console%%%%%%%%%%%
+	-----------------------------
+	true
+	-----------------------------
+	[ 'Chanel', 'Daniel', 'Effeil' ]
+	-----------------------------
+	[ '_Ford',
+	  '_Effeil',
+	  '_Bush',
+	  '_Daniel',
+	  '_Chanel',
+	  '_Bush',
+	  '_Adam' ]
+	[ 'Adam', 'Bush', 'Chanel', 'Daniel', 'Bush', 'Effeil', 'Ford' ]
+	-----------------------------
+	Adam0
+	Bush1
+	Chanel2
+	Daniel3
+	Bush4
+	Effeil5
+	Ford6
+	[ 'Adam0',
+	  'Bush1',
+	  'Chanel2',
+	  'Daniel3',
+	  'Bush4',
+	  'Effeil5',
+	  'Ford6' ]
+	-----------------------------
+	[ false, true, false, false, true, false, false ]
+
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	```
+
+* Reduction Methods
+	* `.reduce(func)`
+	
+
+	* `.reduceRight(func)`
+
+### THE DATE TYPE
+
+### THE REGEXP TYPE
+
+### THE FUNCTION TYPE
+
+### PRIMITIVE WRAPPER TYPES: STRING, NUMBER, BOOLEAN
+
+#### The Boolean Type
+
+#### The Number Type
+
 #### The String Type
+
+### SINGLETON BUILT-IN OBJECTS
+#### The Global Object
+
+#### The Window Object
+
+#### The Math Object
+
+### Summary
+
+## CHAPTER 6 OBJECT-ORIENTED PROGRAMMING January 21, 2015 9:33 PM
