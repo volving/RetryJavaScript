@@ -9,7 +9,7 @@
 >参考书 Professional JavaScript for Web Developers(***ProJS*** for short!!)
 >
 JavaScript终极编辑器：WebStorm 这是最值得投资的利器
-  
+
 ### 学习进程安排：
 
 * 第1～2天 简介 数据类型， 表达式， 操作符
@@ -30,7 +30,7 @@ JavaScript终极编辑器：WebStorm 这是最值得投资的利器
 	* 问答应用可以产生任意多的问题，每个问题有任意多的选项。
 	* 在最后的页面显示用户的成绩。 这个页面进现实成绩， 所以要吧最后一个问题去掉。
 	* 用数组存储所有的问题，每个问题包括它的选项和正确答案，都封装成一个对象，问题数组看起来应该是这样：
-```
+```javascript
 var allQuestions = [
 	{
 		question: "Who is Prime Minister of the United Kingdom?",
@@ -61,7 +61,7 @@ var allQuestions = [
 		
 * 第7～天 类， 继承， HTML5
 	1. 阅读博文 [JavaScript面向对象必知必会](http://javascriptissexy.com/oop-in-javascript-what-you-need-to-know/)
-	2. 阅读***ProJS*** 第6， 16， 22， 24. 第6只读“Object Creation”和“Inheritance”部分。**注意：**这是JS中技术性强度最大的部分， 但至少应学会“Prototype Pattern”，“Factory Pattern”和“Prototypal Inheritance”.
+	2. 阅读 ***ProJS*** 第6， 16， 22， 24. 第6只读“Object Creation”和“Inheritance”部分。**注意：**这是JS中技术性强度最大的部分， 但至少应学会“Prototype Pattern”，“Factory Pattern”和“Prototypal Inheritance”.
 	3. 继续升级之前的问答应用：
 		* 页面使用 [Twitter Bootstrap][1]， 把问题的元素弄的看起来专业一点。 而作为额外奖励，用[Twitter Bootstrap][1]的[标签控件][2]显示问题,每个标签显示一个问题。
 		* 学习[Handlebars][3],将Handlebars.js模板用在问答应用上。 这时JS代码中不再出现HTML代码了。
@@ -80,6 +80,7 @@ var allQuestions = [
 3. [不侧漏精通**Node.js**](http://www.crimx.com//2014/05/22/learn-node-js-completely-and-with-confidence/)
 4. [Meteor.js入门](#)
 5. [Best 3 Framework for JS](#)
+6. [LearningJSDesignPattern](http://www.oschina.net/translate/learning-javascript-design-patterns?cmp)
 
 [Bootstrap](http://getbootstrap.com/2.3.2/components.html)
 

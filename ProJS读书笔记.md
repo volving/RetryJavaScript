@@ -416,9 +416,8 @@ The last same-named function will overwrite the ones before it
 	* **ANY** number of arguments can be passed into a function and are accessible through the `arguments` object.
 	
 
-## Chapter 4 p86~ === 9:23 PM January 19, 2015
 
-	
+## Chapter 4 p86~ === 9:23 PM January 19, 2015
 
 
 ## Chapter 5 Reference Type, p103~  === 2:44 PM January 20, 2015
@@ -443,7 +442,16 @@ Two ways to get access to the properties
 * brackets notation: used especially when the property name contains a blank or other syntax error/keyword/reserved word.
 
 ```javascript
-var f_name = person["first name"]
+var person = {
+	'first name': 'volve',
+	'last name': 'WEI'
+}
+var f_name = person["first name"];
+var ppt_name = 'last name';
+var f_name_2 = person[ppt_name];
+
+console.log(f_name);	//volve
+console.log(f_name_2);	//WEI
 ```
 
 * dot notation
@@ -452,53 +460,110 @@ var f_name = person["first name"]
 var age = person.age;
 ```
 
-### THE ARRAY TYPE
+
+#### THE ARRAY TYPE
 
 **ANY** type of data can be hold in each slot.
 
-Two ways to create Arrays:
+* Two ways to create Arrays:
 
-* new notation, uhn... `new` can be ommited
+	* new notation, uhn... `new` can be ommited
+
+	```javascript
+	var color = new Array();
+	var colour = new Array(20);			//length is 20
+	var colors = new Array('red', 'blue', 'green'); // ['red', 'blue', 'green']
+	```
+
+	* array literal notaion:
+
+	```javascript
+	var colors = ['red', 'blue', 'green'];
+	var names = [];
+	var values = [1,2,]; 			// 2 or 3 items
+	var options = [,,,,,]; 			//5 or 6 items
+	```
+* Detecting Arrays
+	* `instanceof`
+	* `Array.isArray()`
 
 ```javascript
-var color = new Array();
-var colour = new Array(20);
-var colors = new Array('red', 'blue', 'green');
+var names = new Array('Adam', 'Bush', 'Chanel', 'Daniel');
+console.log(names);		// [ 'Adam', 'Bush', 'Chanel', 'Daniel' ]
+
+console.log(names instanceof Array);		// true
+console.log(Array.isArray(names));		// true
+
 ```
 
-* array literal notaion:
+
+* `join()` items in array
 
 ```javascript
-var colors = ['red', 'blue', 'green'];
-var names = [];
-var values = [1,2,]; // 2 or 3 items
-var options = [,,,,,]; //5 or 6 items
+console.log(names.join());			// Adam,Bush,Chanel,Daniel
+console.log(names.join(' '));		// Adam Bush Chanel Daniel
+console.log(names.join('||'));	// Adam||Bush||Chanel||Daniel
 ```
 
-* join items in array
+* Conversion Methods
 
 ```javascript
-var colors = ['red', 'green', 'blue'];
-alert(colors.join(','));
-alert(colors.join('||'));
+console.log(names.toString());	// Adam,Bush,Chanel,Daniel
+console.log(names.valueOf());		//[ 'Adam', 'Bush', 'Chanel', 'Daniel' ]
+
 ```
 
-* Stack Methods
+
+* Stack Methods, treat array as **STACK**, LIFO
 	* `push`
 
 	* `pop`
 
-* Queue Methods
-	* `push`
-
+* Queue Methods, up to the same, treat array as **QUEUE**, FIFO
 	* `shift` 
-
 	* `unshift`
 
-	* `pop`
+	```javascript
+	console.log(names.push('Zoro'));	// 5
+	console.log(names);					// [ 'Adam', 'Bush', 'Chanel', 'Daniel', 'Zoro' ]
+	console.log(names.pop());			// Zoro
+	console.log(names);					// [ 'Adam', 'Bush', 'Chanel', 'Daniel' ]
+	
+	```
 
 * Reordering Methods
-	* `reverse`
-	* `sort`
+	* `reverse()`
+	* `sort()`	parameter：function how to treat the 
 
-parentheses
+	```javascript
+	var a = [1, 5, 10, 15];
+	console.log(a);					// [ 1, 5, 10, 15 ]
+	console.log(a.sort());			// [ 1, 10, 15, 5 ]
+	console.log(a.sort(compare));	// [ 1, 5, 10, 15 ]
+	console.log(a.sort(comp_rvs));	// [ 15, 10, 5, 1 ]
+
+	function compare(p1, p2) {
+		if(p1 > p2){
+			return 1;
+		}if(p1 == p2){
+			return 0;
+		}else {
+			return -1;
+		}
+	}
+
+	function comp_rvs(p1, p2) {
+		if(p1 > p2){
+			return -1;
+		}if(p1 == p2){
+			return 0;
+		}else {
+			return 1;
+		}
+	}	
+	```
+
+* Manipulation Methods
+	* `conct()`
+
+#### The String Type
