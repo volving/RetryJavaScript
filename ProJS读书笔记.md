@@ -403,7 +403,7 @@ The last same-named function will overwrite the ones before it
 	* Undefined
 	* Null
 	* Boolean
-	* Number: Number is not seperated into integers and floating-points.
+	* Number: Number is not separated into integers and floating-points.
 	* String
 
 * Objects: No complex DATATYPEs, Object is the base type for all objects in JavaScript
@@ -412,7 +412,7 @@ The last same-named function will overwrite the ones before it
 * **Functions** are totally different from other language like C and Java.
 	* No need to specify the return value: **ANY** function can return **ANY** value at **ANY** time.
 	* Functions return `undefined` if they don't specify a return value
-	* No function signature, so there're no overloading, arguments are passed as an array containning zero or more values.
+	* No function signature, so there're no overloading, arguments are passed as an array containing zero or more values.
 	* **ANY** number of arguments can be passed into a function and are accessible through the `arguments` object.
 	
 
@@ -467,7 +467,7 @@ var age = person.age;
 
 * Two ways to create Arrays:
 
-	* new notation, uhn... `new` can be ommited
+	* new notation, uhn... `new` can be omitted
 
 	```javascript
 	var color = new Array();
@@ -475,7 +475,7 @@ var age = person.age;
 	var colors = new Array('red', 'blue', 'green'); // ['red', 'blue', 'green']
 	```
 
-	* array literal notaion:
+	* array literal notation:
 
 	```javascript
 	var colors = ['red', 'blue', 'green'];
@@ -524,9 +524,9 @@ console.log(names.valueOf());		//[ 'Adam', 'Bush', 'Chanel', 'Daniel' ]
 	* `unshift`
 
 	```javascript
-	console.log(names.push('Zoro'));	// 5
-	console.log(names);					// [ 'Adam', 'Bush', 'Chanel', 'Daniel', 'Zoro' ]
-	console.log(names.pop());			// Zoro
+	console.log(names.push('Zero'));	// 5
+	console.log(names);					// [ 'Adam', 'Bush', 'Chanel', 'Daniel', 'Zero' ]
+	console.log(names.pop());			// Zero
 	console.log(names);					// [ 'Adam', 'Bush', 'Chanel', 'Daniel' ]
 	
 	```
@@ -564,19 +564,19 @@ console.log(names.valueOf());		//[ 'Adam', 'Bush', 'Chanel', 'Daniel' ]
 	```
 
 * Manipulation Methods
-	* `conct()`
+	* `concat()`
 	* `slice()`
 
 	```javascript
 	var names = new Array('Adam', 'Bush', 'Chanel', 'Daniel');
-	var names2 = ['WEI','Xen', 'York', 'Zoro'];
+	var names2 = ['WEI','Xen', 'York', 'Zero'];
 
 	var names3 = names.concat(names2);
 	console.log(names);		// [ 'Adam', 'Bush', 'Chanel', 'Daniel' ]
-	console.log(names3);	// [ 'Adam', 'Bush', 'Chanel', 'Daniel', 'WEI', 'Xen', 'York', 'Zoro' ]
+	console.log(names3);	// [ 'Adam', 'Bush', 'Chanel', 'Daniel', 'WEI', 'Xen', 'York', 'Zero' ]
 
 	var names4 = names3.slice(2);
-	console.log(names4);	// [ 'Chanel', 'Daniel', 'WEI', 'Xen', 'York', 'Zoro' ]
+	console.log(names4);	// [ 'Chanel', 'Daniel', 'WEI', 'Xen', 'York', 'Zero' ]
 
 	var names5 = names3.slice(2, 6);
 	console.log(names5);	// [ 'Chanel', 'Daniel', 'WEI', 'Xen' ]	
@@ -587,21 +587,21 @@ console.log(names.valueOf());		//[ 'Adam', 'Bush', 'Chanel', 'Daniel' ]
 			just call `.splice(<start>[, end])` to delete the items
 		* Insertion
 			call `.splice(<start>, <number to delete>, <,,,>)` to insert <,,,> at position <start> after deleting <number to delete> items behind <start>
-		* Replacement special useage of the 'Insertion'
+		* Replacement special usage of the 'Insertion'
 
 		```javascript
-		console.log(names3);	// [ 'Adam', 'Bush', 'Chanel', 'Daniel', 'WEI', 'Xen', 'York', 'Zoro' ]
+		console.log(names3);	// [ 'Adam', 'Bush', 'Chanel', 'Daniel', 'WEI', 'Xen', 'York', 'Zero' ]
 		var names6 = names3.concat([]); // Create a new array using the existing one
-		console.log(names6);	// [ 'Adam', 'Bush', 'Chanel', 'Daniel', 'WEI', 'Xen', 'York', 'Zoro' ]
+		console.log(names6);	// [ 'Adam', 'Bush', 'Chanel', 'Daniel', 'WEI', 'Xen', 'York', 'Zero' ]
 
 		names3.splice(2, 9);	// Deletion
 		console.log(names3);	// [ 'Adam', 'Bush' ]
-		console.log(names6);	// [ 'Adam', 'Bush', 'Chanel', 'Daniel', 'WEI', 'Xen', 'York', 'Zoro' ]
-		names3.splice(1, 0, 'Chanel', 'Daniel');	// Instion
+		console.log(names6);	// [ 'Adam', 'Bush', 'Chanel', 'Daniel', 'WEI', 'Xen', 'York', 'Zero' ]
+		names3.splice(1, 0, 'Chanel', 'Daniel');	// Insertion
 		console.log(names3);	// [ 'Adam', 'Chanel', 'Daniel', 'Bush' ]
 
-		names6.splice(2, 2, 'Chower', 'Duskun');	// Replacement
-		console.log(names6);	// [ 'Adam', 'Bush', 'Chower', 'Duskun', 'WEI', 'Xen', 'York', 'Zoro' ]
+		names6.splice(2, 2, 'Chewer', 'Duskun');	// Replacement
+		console.log(names6);	// [ 'Adam', 'Bush', 'Chewer', 'Duskun', 'WEI', 'Xen', 'York', 'Zero' ]
 		
 		```
 
@@ -610,7 +610,7 @@ console.log(names.valueOf());		//[ 'Adam', 'Bush', 'Chanel', 'Daniel' ]
 	* `.lastIndexOf()`
 	
 	```javascript
-	var names = new Array('Adam', 'Bush', 'Chanel', 'Daniel', 'Bush', 'Effeil', 'Ford');
+	var names = new Array('Adam', 'Bush', 'Chanel', 'Daniel', 'Bush', 'Eiffel', 'Ford');
 	console.log(names.indexOf('Bush'));	// 1
 	console.log(names.indexOf('Bush', 1)); // 1
 	console.log(names.indexOf('Bush', 2)); // 4
@@ -626,7 +626,7 @@ console.log(names.valueOf());		//[ 'Adam', 'Bush', 'Chanel', 'Daniel' ]
 	* `.every(func)`	: Runs the given function **func** on every item in the array and return **true** if **func** returns **true** for every item.
 
 	```javascript
-	var names = new Array('Adam', 'Bush', 'Chanel', 'Daniel', 'Bush', 'Effeil', 'Ford');
+	var names = new Array('Adam', 'Bush', 'Chanel', 'Daniel', 'Bush', 'Eiffel', 'Ford');
 
 	var every = names.every(function(item, index, array){
 		console.log(item);
@@ -641,7 +641,7 @@ console.log(names.valueOf());		//[ 'Adam', 'Bush', 'Chanel', 'Daniel' ]
 	Chanel
 	Daniel
 	Bush
-	Effeil
+	Eiffel
 	Ford
 	-----------------------------
 	true
@@ -661,7 +661,7 @@ console.log(names.valueOf());		//[ 'Adam', 'Bush', 'Chanel', 'Daniel' ]
 	%%%%%%%%%%%console%%%%%%%%%%%
 	true
 	-----------------------------
-	[ 'Chanel', 'Daniel', 'Effeil' ]
+	[ 'Chanel', 'Daniel', 'Eiffel' ]
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 	```
@@ -672,7 +672,7 @@ console.log(names.valueOf());		//[ 'Adam', 'Bush', 'Chanel', 'Daniel' ]
 	* `.some(func)` : Runs the given function on  every item in the array and returns array of **true** (if the function returns true) and **false** (if the function returns false)
 
 	```javascript
-	var names = new Array('Adam', 'Bush', 'Chanel', 'Daniel', 'Bush', 'Effeil', 'Ford');
+	var names = new Array('Adam', 'Bush', 'Chanel', 'Daniel', 'Bush', 'Eiffel', 'Ford');
 
 	/*********every()*********/
 	var every = names.every(function(item, index, array){
@@ -724,30 +724,30 @@ console.log(names.valueOf());		//[ 'Adam', 'Bush', 'Chanel', 'Daniel' ]
 	-----------------------------
 	true
 	-----------------------------
-	[ 'Chanel', 'Daniel', 'Effeil' ]
+	[ 'Chanel', 'Daniel', 'Eiffel' ]
 	-----------------------------
 	[ '_Ford',
-	  '_Effeil',
+	  '_Eiffel',
 	  '_Bush',
 	  '_Daniel',
 	  '_Chanel',
 	  '_Bush',
 	  '_Adam' ]
-	[ 'Adam', 'Bush', 'Chanel', 'Daniel', 'Bush', 'Effeil', 'Ford' ]
+	[ 'Adam', 'Bush', 'Chanel', 'Daniel', 'Bush', 'Eiffel', 'Ford' ]
 	-----------------------------
 	Adam0
 	Bush1
 	Chanel2
 	Daniel3
 	Bush4
-	Effeil5
+	Eiffel5
 	Ford6
 	[ 'Adam0',
 	  'Bush1',
 	  'Chanel2',
 	  'Daniel3',
 	  'Bush4',
-	  'Effeil5',
+	  'Eiffel5',
 	  'Ford6' ]
 	-----------------------------
 	[ false, true, false, false, true, false, false ]
@@ -785,4 +785,476 @@ console.log(names.valueOf());		//[ 'Adam', 'Bush', 'Chanel', 'Daniel' ]
 
 ### Summary
 
+
+
 ## CHAPTER 6 OBJECT-ORIENTED PROGRAMMING January 21, 2015 9:33 PM
+
+>An object is an array of values in no particular order. Each property or method is identified by a name that is mapped to a value(objects => hash tables).**A group of name-value pairs where the value may be data or a function!**
+
+### UNDERSTANDING OBJECT PROPERTIES
+
+#### Types of Properties (Data,Accessor)
+* **Data Properties**: It contains a single location for a data value. Values are read from and written to this location. Data properties have four attributes describing their behavior:(Boolean type)
+	* [[configurable]]: Indicates if the property may be redefined by removing the property via delete, changing the property's attributes, or changing their property into an accessor property. Value is ***`true`*** by default for those properties defined directly on an object.
+	* [[enumerable]]: Indicate if the property will be returned in a for-in loop. By default this is ***`true`*** for all properties defined directly on an object.
+	* [[writable]]: Indicates if the property's value can be changed. By default, this is ***`true`***.
+	* [[value]]: Contains the actual data value for the property. This is the location from which the property's value is read and location to which new values are saved. The default value for this attribute is ***`undefiled`***.
+
+	```javascript
+	var Person = function(name, title, age, words){
+		this.name = name;
+		this.title = title;
+		this.age = age;
+		this.words = words;
+		speak = function(wd){
+			if(wd == null){
+				wd = words;
+			}
+			console.log(wd);
+		};
+	}
+	var person = new Person('Wolverine', 'Captain', 210, 'Smash\'em all!');
+	var dog = new Person('Chairman Mao', '???', 72, 'Kill all enemies!');
+
+	Object.defineProperty(person, 'name', {
+		configurable:false,
+		value:'VOLVING'
+	});
+
+	Object.defineProperty(person, 'title', {
+		writable:false
+	});
+
+
+	console.log(person);
+	delete person.name;
+	person.title = 'sailor';
+	console.log(person);
+
+	console.log('>-------------------<') 
+
+	console.log(dog);
+	delete dog.name;
+	dog.title = 'Worker';
+	console.log(dog);
+
+	console.log('>-------------------<') 
+
+	var sp = [];
+	for (var item in person) {
+		sp.push(person[item]);
+	}
+	console.log(sp);
+	Object.defineProperty(dog, 'speak', {
+		enumerable:false
+	});
+
+	var sd = [];
+	for(var item in dog){
+		sp.push(dog[item]);
+	}
+	console.log(sd);
+	//%%%%%%%%%CONSOLE%%%%%%%%%
+	{ name: 'VOLVING',
+	  title: 'Captain',
+	  age: 210,
+	  words: 'Smash\'em all!' }
+	{ name: 'VOLVING',
+	  title: 'Captain',
+	  age: 210,
+	  words: 'Smash\'em all!' }
+	>-------------------<
+	{ name: 'Chairman Mao',
+	  title: '???',
+	  age: 72,
+	  words: 'Kill all enemies!' }
+	{ title: 'Worker', age: 72, words: 'Kill all enemies!' }
+	>-------------------<
+	[ 'VOLVING', 'Captain', 210, 'Smash\'em all!' ]
+	[]
+	//%%%%%%%%%%%%%%%%%%%%%%%%%%
+	```
+
+==Be careful to use `Object.defineProperty()`, if one internal property is set `false`, the `defineProperty()` cannot be applied on that property== after the code above, execute
+> ```javascript
+> 
+Object.defineProperty(dog, 'speak', {
+	enumerable:true
+});
+```
+we'll get error:\" `TypeError: Cannot redefine property: speak`\"
+
+
+* **Accessor Properties** contain **NO** data value. Instead, they contain a combination of a getter function and a setter function(however both are not necessary). When an accessor property i read from, the getter function is called, and it's the function's responsibility to return a valid value; when an accessor property is written to, a function is called with the new value, and that function must decide how to react to the data. Accessor properties have four attributes:
+	* [[configurable]]
+	* [[enumerable]]
+	* [[get()]]: The function to call when the property is read from. The default value is `undefined`.
+	* [[set()]]: called when the property is written to. Default is `undefiled`.
+
+	==Only `Object.defineProperty()` can define a _accessor property_==
+
+	*Something like the setters and getters in J2EE*
+	
+	```javascript
+	var lady = {
+		name : 'Ivey',
+		_age : 24
+	}
+	console.log(lady.age);
+
+	Object.defineProperty(lady, 'age', {
+		get: function () {
+			return this._age;
+		},
+		set: function (newAge) {
+			this._age = newAge;
+		}
+	})
+
+	console.log(lady.age);
+	
+	```
+* Method `Object.defineProperties()` can used to define multiple properties at once!
+
+```javascript
+var book = {};
+Object.defineProperties(book, {
+	_age:{
+		value: 24
+	},
+	
+	age:{
+		get: function(){
+			return this._age;
+		},
+		
+		set: function(val){
+			this._age = newValue;
+		}
+	}
+})
+```
+* Method `Object.getOwnPropertyDescriptor()` can access the property descriptor for a given property.
+
+```javascript
+console.log(Object.getOwnPropertyDescriptor(book, 'age'));
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~')
+console.log(Object.getOwnPropertyDescriptor(person, 'name'));
+/*
+%%%%%%%%%%%%CONSOLE%%%%%%%%%%%%
+{ get: [Function],
+  set: [Function],
+  enumerable: false,
+  configurable: false }
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+{ value: 'VOLVING',
+  writable: true,
+  enumerable: true,
+  configurable: false }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+```
+
+### UNDERSTANDING AND CREATING OBJECTS
+
+#### The Factory Pattern
+
+```javascript
+function createPerson(name, age, mature){
+	var o = new Object();
+	o.name = name;
+	o.age = age;
+	o.mature = mature;
+	o.sayName = function(){
+		console.log(this.name);
+	}
+	return o;
+}
+
+var p1 = createPerson('Wolverine', 171, true);
+console.log(p1);
+p1.sayName();
+```
+
+#### Constructor Pattern
+Since JS cannot create a object by using the constructors in there `class`, constructor function became the convenient way to create object of specified 'class'
+
+```javascript
+function Person(name, age, mature){
+	this.name = name;
+	this.age = age;
+	this.mature = mature;
+	this.sayName = function () {
+		console.log(this.name);
+	}
+}
+
+p2 = new Person('Logan', 171, true);
+
+console.log(p2);
+p2.sayName();
+```
+
+* Problems with Constructors
+	* downside
+
+#### The Prototype Pattern
+
+### Understanding Inheritance
+
+
+
+
+## CHAPTER 8 Function Expressions 
+
+### RECURSION
+
+### CLOSURES
+
+#### Closures and Variables
+
+#### The this Object
+
+#### Memory Leaks
+
+### MIMIKING BLOCK SCOPE
+
+### PRIVATE VARIABLES
+
+#### Static Private Variables
+
+#### The Module Pattern
+
+#### The Module-Augmentation Pattern
+
+### SUMMARY
+
+
+## The Browser Object Model
+
+### The Window Object
+
+### The Global Scope
+
+### Window Relationships and Frames
+
+### Window Position
+
+### Window Size
+
+### Navigating and Opening Windows
+
+#### Popping Up Windows
+
+#### Security Restrictions
+
+#### Pop-up Blockers
+
+### Intervals and Timeouts
+
+### System Dialogs:***`alert()`***,***`confirm()`***,***`prompt()`***
+
+### THE LOCATION OBJECT
+
+#### Query String Arguments
+
+#### Manipulating the Location
+
+### THE NAVIGATOR OBJECT
+
+#### Detecting Plug-ins
+
+#### Registering Handlers
+
+### THE SCREEN OBJECT
+
+### THE HISTORY OBJECT
+
+### SUMARY
+
+
+## CHAPTER 9 CLIENT DETECTION
+
+### CAPABILITY DETECTION
+
+#### Safer Capability Detection
+
+#### Capability Detection Is Not Browser Detection
+
+### QUIRKS DETECTION
+
+### USER-AGENT DETECTION
+
+#### History
+
+#### Early Browsers
+
+##### Netscape Navigator 3 and IE 3
+
+##### Netscape Communicator 4 and IE 4~8
+
+#### Gecko
+
+#### WebKit
+
+#### Konqueror
+
+##### Chrome
+
+##### Opera
+
+#### iOS and Android
+
+### Working with User-Agent Detection
+
+#### Identifying the Rendering Engine
+
+#### Identifying the Browser
+
+#### Identifying the Platform
+
+#### Identifying Windows Operating System
+
+#### Identifying Mobile Devices
+
+#### Identifying Game Systems
+
+#### The Complete Script
+
+### Usage
+
+### SUMMARY
+
+
+
+
+## CHAPTER 10 THE DOM
+-----------------------------
+
+### HIERARCHY OF NODES
+
+#### The Node Type
+=============================
+
+##### The nodeName and nodeValue Properties
+
+##### Node Relationships
+
+##### Manipulating Nodes
+
+##### Other Methods
+
+#### The Document Type
+=============================
+
+##### Document Children
+
+##### Document Information
+
+##### Locating Elements
+
+##### Special Collections
+
+##### DOM Conformance Detection
+
+##### Document Writing 
+
+#### The Element Type
+=============================
+
+##### HTML Elements
+
+###### Getting Attributes
+
+###### Setting Attributes
+
+###### The attributes Property
+
+###### Creating Elements
+
+###### Element Children
+
+#### The Next Type
+=============================
+
+##### Creating Text Nodes
+
+
+##### Normalizing Text Nodes
+
+##### Splitting Text Nodes
+
+##### The Comment Type
+
+##### The CDATASection Type
+
+##### The DocumentType Type
+
+##### The DocumentFragment Type
+
+##### The Attr Type
+
+
+
+### WORKING WITH THE DOM
+
+#### Dynamic Scripts
+
+#### Dynamic Styles
+
+#### Manipulating Tables
+
+#### Using NodeLists
+
+### SUMMARY
+
+
+
+## CHAPTER 11 DOM EXTENTIONS
+
+## CHAPTER 12 DOM LEVELS 2 AND 3
+
+## CHAPTER 13 EVENTS
+-----------------------------
+
+## CHAPTER 14 SCRIPTING FORMS
+-----------------------------
+
+## CHAPTER 15 GRAPHICS WITH CANVAS
+-----------------------------
+
+## CHAPTER 16 HTML5 SCRIPTING
+-----------------------------
+
+
+## CHAPTER 17 ERROR HANDLING AND DEBUGGING
+
+## CHAPTER 18 XML IN JAVASCRIPT
+
+## CHAPTER 19 ECMASCRIPT FOR XML
+
+
+
+## CHAPTER 20 JSON
+-----------------------------
+
+## CHAPTER 21 AJAX AND COMET
+
+## CHAPTER 22 ADVANCED TECHNIQUES
+
+
+## CHAPTER 23 OFFLINE APPLICATIONS AND CLIENT-SIDE STORAGE
+-----------------------------
+
+## CHAPTER 24 BEST PRACTICES
+-----------------------------
+
+## CHAPTER 25 EMERGING APIS
+-----------------------------
+
+## APPENDIX C JavaScript Libraries
+-----------------------------
+
+## APPENDIX D JavaScript Tools
+-----------------------------
+
