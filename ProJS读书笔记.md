@@ -766,6 +766,7 @@ console.log(names.valueOf());		//[ 'Adam', 'Bush', 'Chanel', 'Daniel' ]
 
 ### THE REGEXP TYPE
 
+
 ### THE FUNCTION TYPE
 
 ### PRIMITIVE WRAPPER TYPES: STRING, NUMBER, BOOLEAN
@@ -1005,7 +1006,7 @@ p2.sayName();
 
 
 
-## CHAPTER 8 Function Expressions 
+## CHAPTER 8 Function Expressions >>Thus Jan 22nd, 2015 20:35:5
 
 ### RECURSION
 
